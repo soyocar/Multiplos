@@ -1,9 +1,18 @@
 import "./styles.css";
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>`;
+let btnEnv = document.getElementById("enviar");
+let num: number = document.getElementById("dato1");
+let mult: number = document.getElementById("dato2");
+
+btnEnv.addEventListener("click", () => {
+  let numero: number = Number(num.value);
+  let multiplo: number = Number(mult.value);
+  function EsMultiplo(numero: number, multiplo: number): boolean {
+    return numero % multiplo === 0;
+  }
+  if (EsMultiplo(numero, multiplo)) {
+    console.log(numero + " Es número multiplo de " + multiplo);
+  } else {
+    console.log(numero + " No es múltilplo de " + multiplo);
+  }
+});
