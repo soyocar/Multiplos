@@ -16,3 +16,4 @@ btnEnv.addEventListener("click", () => {
     console.log(numero + " No es múltilplo de " + multiplo);
   }
 });
+//esta bien tu solucion
